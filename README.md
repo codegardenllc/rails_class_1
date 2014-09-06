@@ -1,9 +1,8 @@
 # Ruby on Rails Application Design Class - Beginner
-=============
 
 ## Summary
 
-This class consists of approximately eight 1 1/2 hour long sessions starting from initial design to deployment.
+This class consists of approximately eight 1.5 hour long sessions starting from initial design to deployment.
 
 ## Prerequisites
 
@@ -25,6 +24,7 @@ Since we spent a lot of time last class setting up Ruby on Rails, doing that wou
   * Add styles and javascript to the application
     * CoffeeScript
     * Sass
+    * HAML
 * Week 4:
   * Validations
   * Unit testing
