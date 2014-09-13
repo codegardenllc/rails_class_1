@@ -1,0 +1,27 @@
+.container-fluid
+  %p= link_to("Create item", new_item_path, class: 'btn btn-default')
+
+  %hr
+
+  %table.table.table-striped
+    - @incomplete_items.each do |item|
+      %tr
+        %td= item.item_type.name
+        %td= item.name
+        %td
+          = link_to('Complete', 'javascript:void(0)', class: 'btn btn-success btn-sm complete-link')
+          = link_to('Delete', { action: :destroy, id: item.id }, method: :delete, class: 'btn btn-danger btn-sm')
+
+.container-fluid
+  %h2 Completed items
+
+  %table.table.table-striped#completed-table
+    %tr
+      %th Type
+      %th Name
+      %th Completed at
+    - @completed_items.each do |item|
+      %tr
+        %td= item.item_type.name
+        %td= item.name
+        %td= item.completed_at.strftime("%b %d, %Y %H:%M")

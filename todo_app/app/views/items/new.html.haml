@@ -1,0 +1,12 @@
+%h1 New item
+= form_for @item do |f|
+  %p
+    = f.label :item_type_id
+    %br
+    = f.select :item_type_id, options_for_select(ItemType.all.collect { |item_type| [item_type.name, item_type.id] })
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %br
+  = f.submit

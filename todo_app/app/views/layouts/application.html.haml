@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %title Todo App
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %nav.navbar.navbar-default{:role => "navigation"}
+      .container-fluid
+        .navbar-header
+          %a.navbar-brand{href: root_path} Todo App
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li.active
+              = link_to 'Items', items_path
+            %li
+              = link_to 'New item', new_item_path
+          
+    = yield
